@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<header th:replace="~{common/head :: header}"></header>
+<body>
+<div id="app" style="margin: 20px 20%">
+    欢迎登录，<span th:text="${userInfo.name}"></span>！
+    你的密码是：<span th:text="${userInfo.password}"></span>
+</div>
+</body>
+</html>
