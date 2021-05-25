@@ -4,6 +4,7 @@ import com.wl.springboottest.model.UserInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +29,13 @@ public class IndexController {
             mv.setViewName("page/index");
             mv.addObject(userInfo);
         }
+        return mv;
+    }
+
+    @RequestMapping(value = "/goToAjaxTest.do")
+    public ModelAndView goToAjaxTest() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("page/ajaxTest");
         return mv;
     }
 }

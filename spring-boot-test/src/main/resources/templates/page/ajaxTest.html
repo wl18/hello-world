@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<header th:replace="~{common/head :: header}"></header>
+<body>
+    <div>
+        <span></span>
+        <button class="btn">ajax测试获取数据</button>
+    </div>
+
+
+    <script type="text/javascript">
+       $('.btn').click(function () {
+           console.log("进来了");
+            $.ajax({
+                type: "GET",
+                url: "/ajaxTest",
+                dataType: "json",//预计接收的后台返回数据是json对象，如果后台传的是json字符串，则会自动转成对象
+                success: function (data) {
+                    alert(typeof data);
+                    alert(data.t1);
+                }
+            })
+       })
+    </script>
+
+</body>
+</html>

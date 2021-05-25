@@ -19,6 +19,7 @@
         <mysql.version>8.0.16</mysql.version>
         <lombok.version>1.18.20</lombok.version>
         <druid.version>1.2.5</druid.version>
+        <fastjson.version>1.2.70</fastjson.version>
     </properties>
 
     <dependencies>
@@ -47,6 +48,12 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
 
         <dependency>
